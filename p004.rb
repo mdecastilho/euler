@@ -6,16 +6,15 @@
 a = 100
 b = 999
 
-def is_palindromic?(n)
-    s = n.to_s
-    return s == s.reverse
+def palindromic?(n)
+    n.to_s == n.to_s.reverse
 end
 
 palindromics = Array.new
 (a..b).each do |i| 
     (a..i).each do |j|
         p = i*j
-        palindromics << p if is_palindromic?(p)
+        palindromics << p if palindromic?(p)
     end
 end
 

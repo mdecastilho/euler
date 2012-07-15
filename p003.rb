@@ -3,7 +3,7 @@
 # What is the largest prime factor of the number 600851475143 ?
 # => 6857
 
-num = 600851475143 
+number = 600851475143 
 
 def prime_sieve(n)
     sieve = []
@@ -19,8 +19,5 @@ def prime_sieve(n)
     sieve.compact
 end
 
-def prime_factors(n)
-    prime_sieve(Math.sqrt(n)).select { |v| n%v == 0 }
-end
-
-puts prime_factors(num).last
+prime_factors = prime_sieve(Math.sqrt(number)).select { |v| number%v == 0 }
+puts prime_factors.last

@@ -4,8 +4,8 @@
 # => 233168
 
 limit = 1000
-sum = 0
 
+sum = 0
 (1...limit).each { |v| sum += v if v%3 == 0 || v%5 == 0 }
 
 puts sum

@@ -11,7 +11,7 @@ def gcd(a, b)
 end
 
 def lcm(a, b)
-    a * b / gcd(a, b)
+    return a * b / gcd(a, b)
 end
 
 puts (1..limit).reduce { |a, b| lcm(a, b) }
