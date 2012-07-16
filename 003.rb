@@ -5,19 +5,17 @@
 
 number = 600851475143 
 
-def prime_sieve(n)
-    sieve = []
-    for i in 2..n
-        sieve[i] = i
-    end
-    for i in 2..Math.sqrt(n)
-        next unless sieve[i]
-        (i*i).step(n, i) do |j|
-            sieve[j] = nil
+def prime_factors(n)
+    factors = Array.new
+    i = 2
+    while n > 1
+        while n%i == 0
+            factors << i
+            n /= i
         end
+        i += 1
     end
-    sieve.compact
+    factors
 end
 
-prime_factors = prime_sieve(Math.sqrt(number)).select { |v| number%v == 0 }
-puts prime_factors.last
+puts prime_factors(number).last
