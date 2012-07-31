@@ -3,7 +3,7 @@
 # Find the sum of all the primes below two million.
 # => 142913828922
 
-limit = 2000000
+LIMIT = 2000000
 
 def prime_sieve(n)
     sieve = []
@@ -19,4 +19,4 @@ def prime_sieve(n)
     sieve.compact
 end
 
-puts prime_sieve(limit).reduce(:+)
+puts prime_sieve(LIMIT).reduce(:+)

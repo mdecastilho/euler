@@ -5,7 +5,7 @@
 # Find the product abc.
 # => 31875000
 
-sum = 1000
+SUM = 1000
 
 def pythagorean?(a, b, c)
     a < b && b < c && a * a + b * b == c * c
@@ -20,4 +20,4 @@ def find_product(s)
     end
 end
 
-puts find_product(sum)
+puts find_product(SUM)

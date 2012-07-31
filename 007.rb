@@ -3,7 +3,7 @@
 # What is the 10 001st prime number?
 # => 104743
 
-limit = 10001
+LIMIT = 10001
 
 def prime?(n)
     (2..Math.sqrt(n)).each { |v| return false if n%v == 0 }
@@ -19,7 +19,7 @@ def next_prime(n)
 end
 
 primes = Array[2]
-while primes.length < limit
+while primes.length < LIMIT
     n = primes.last
     primes << next_prime(n)
 end

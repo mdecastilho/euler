@@ -3,7 +3,7 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 # => 232792560
 
-limit = 20
+LIMIT = 20
 
 def gcd(a, b)
     return a if b == 0
@@ -14,4 +14,4 @@ def lcm(a, b)
     a * b / gcd(a, b)
 end
 
-puts (1..limit).reduce { |a, b| lcm(a, b) }
+puts (1..LIMIT).reduce { |a, b| lcm(a, b) }

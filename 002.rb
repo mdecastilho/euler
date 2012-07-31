@@ -4,13 +4,12 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 # => 4613732
 
-@limit = 4000000
-@sum = 0
+LIMIT = 4000000
 
-def fib(a, b)
+def fib(a, b, sum = 0)
     c = a + b
-    @sum += c if c%2 == 0
-    c > @limit ? @sum : fib(b, c)
+    sum += c if c%2 == 0
+    c > LIMIT ? sum : fib(b, c, sum)
 end
 
 puts fib(0, 1)

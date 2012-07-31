@@ -3,9 +3,9 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 # => 233168
 
-limit = 1000
+LIMIT = 1000
 
 sum = 0
-(1...limit).each { |v| sum += v if v%3 == 0 || v%5 == 0 }
+(1...LIMIT).each { |v| sum += v if v%3 == 0 || v%5 == 0 }
 
 puts sum

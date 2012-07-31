@@ -5,14 +5,14 @@
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 # => 25164150
 
-@limit = 100
+LIMIT = 100
 
 def sum_of_squares
-    (1..@limit).reduce { |sum, v| sum += v * v }
+    (1..LIMIT).reduce { |sum, v| sum += v * v }
 end
 
 def square_of_sum
-    sum = (1..@limit).reduce(:+)
+    sum = (1..LIMIT).reduce(:+)
     sum * sum
 end
 

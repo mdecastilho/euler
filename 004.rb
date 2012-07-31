@@ -3,17 +3,16 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 # => 906609
 
-a = 100
-b = 999
-
 def palindromic?(n)
     n.to_s == n.to_s.reverse
 end
 
 palindromics = Array.new
+a = 100
+b = 999
 (a..b).each do |i| 
     (a..i).each do |j|
-        p = i*j
+        p = i * j
         palindromics << p if palindromic?(p)
     end
 end
